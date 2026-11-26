@@ -13,10 +13,7 @@
 | **Project Title** | Student Attendance Analyzer |
 | **Problem Statement** | Problem 7 — Develop a program to record and analyze attendance for a class of students |
 | **Course** | C Programming Lab (Mini Hackathon) |
-| **University** | UPES, Dehradun |
 | **Faculty** | Dr. Banti Kumar |
-| **Batch** | `__________` *(fill in)* |
-| **Team No.** | `__________` *(fill in)* |
 | **Team Name** | 3 Idiots |
 
 ### Team Members
