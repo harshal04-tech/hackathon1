@@ -1,0 +1,70 @@
+STUDENT ATTENDANCE ANALYZER - TEST CASES
+Team 3 Idiots | Faculty: Dr. Banti Kumar
+Run: gcc attendance_analyzer.c -o attendance -lm  then  ./attendance
+Result: all 12 tests PASSED (checked by running the real program)
+------------------------------------------------------------
+
+A. NORMAL USE
+
+TC01  Add a student
+      Input  : roll 101, name Aarav Sharma
+      Output : Student added successfully!
+
+TC02  Take attendance with small letter
+      Input  : p
+      Output : accepted as P, attendance recorded
+
+TC03  Student below 75%
+      Input  : 2 present out of 4 days
+      Output : 50.00%, SHORTAGE, Must attend next 4 days.
+
+TC04  Everyone present
+      Input  : all P
+      Output : There are no defaulters!
+
+B. WRONG INPUT (program must not crash)
+
+TC05  Same roll number again
+      Input  : 101 twice
+      Output : Invalid or duplicate roll number!
+
+TC06  Letters instead of number
+      Input  : abc (roll) or x (menu)
+      Output : Invalid input!
+
+TC07  Wrong attendance letter
+      Input  : Z
+      Output : Enter P or A only!  (asks again)
+
+TC08  Roll number not found
+      Input  : search 999
+      Output : Student not found!
+
+C. SPECIAL CASES
+
+TC09  Exactly at the limit
+      Input  : 3 present out of 4 days
+      Output : 75.00%, OK  (75% is allowed)
+
+TC10  Late joiner
+      Input  : student added after 1 class, present in 1 class
+      Output : Total Days: 1, Attendance: 100.00%
+               (old classes are not counted)
+
+TC11  Threshold 100 after one absent
+      Input  : 2 present out of 3 days, threshold 100
+      Output : Cannot reach 100% now.
+
+TC12  Report with no students
+      Input  : option 3 on empty list
+      Output : No students available!
+
+------------------------------------------------------------
+SAMPLE RUN (3 students, 4 days, threshold 75%)
+
+  Roll  Name          P  A  Percent
+  101   Aarav Sharma  4  0  100.00%  OK
+  102   Riya Verma    2  2   50.00%  SHORTAGE  -> attend next 4 days
+  103   Kabir Singh   1  3   25.00%  SHORTAGE  -> attend next 8 days
+
+  Class average: 58.33%
